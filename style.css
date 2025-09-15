@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: hsl(0, 0%, 0%);
+  --bg-mid: hsl(0, 0%, 20%);
+  --bg-light: hsl(0, 0%, 30%);
+  --text: hsl(0, 0%, 100%);
+  --text-dark: hsl(0, 0%, 80%);
+  --bg-i: hsl(0, 0%, 80%);
+  --bg-mid-i: hsl(0, 0%, 90%);
+  --bg-light-i: hsl(0, 0%, 100%);
+  --text-i: hsl(0, 0%, 0%);
+  --text-dark-i: hsl(0, 0%, 20%);
+  --border: hsl(0, 0%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  align-items: center;
+  justify-content: center;
+  transition: all .1s ease;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  background-color: var(--bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;
+  top: 5%;
+  background-color: hsl(from var(--border) h s l / .5);
+  backdrop-filter: blur(5px);
+  width: 80%;
+  height: 10vh;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--text);
+  font-weight: bold;
+  letter-spacing: .2rem;
+  margin-left: 3rem;
+  transition: transform .25s ease, text-shadow .25s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px white;
+}
+
+.nav {
+  width: 50%;
+  height: 100%;
+  margin-right: 3rem;
+  display: flex;
+  gap: 2%;
+}
+
+.btn {
+  font-size: 2rem;
+  display: flex;
+  background-color: var(--bg-mid);
+  width: 100%;
+  height: 75%;
+  border-style: none;
+  border-width: 1px;
+  border-color: var(--border);
+  border-radius: 5rem;
+  color: var(--text-dark);
+}
+.btn:hover {
+  background-color: var(--bg-light);
+  color: var(--text);
+  font-weight: bold;
+}
+.btn:active {
+  background-color: var(--bg-light-i);
+  color: var(--text-i);
+}
+
+section {
+  display: flex;
+  font-size: 2rem;
+  width: 100%;
+  height: 100vh;
+  color: var(--text);
+}
+
+.home {
+  flex-direction: column;
+}
+
+@keyframes fadeIn1 {
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn2 {
+  to {transform: translate(0px, 0%);}
+}
+
+.text1 {
+  font-size: 5rem;
+  opacity: 0;
+  transform: translate(0px, 250%);
+  animation: fadeIn1 1s ease forwards .1s, fadeIn2 1s ease forwards 1s;
+}
+
+.text2 {
+  margin-top: 3%;
+  width: 60%;
+  opacity: 0;
+  animation: fadeIn1 1s ease forwards 1.2s;
+}
+
+.text2u {
+  text-decoration: underline;
+}
+
+.blender {
+  color: orange;
+}
+
+.blender:hover {
+  color: orange;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contact {
+  padding: 3rem 0px;
+  width: 95%;
+  height: 100%;
+  margin: 2rem 0px;
+  background-color: var(--bg-mid);
+  border-radius: 3rem;
+  flex-direction: column;
+  gap: 10vh;
+}
+
+.copybtn {
+  color: rgb(102, 163, 255);
+  cursor: pointer;
+  user-select: none;
+}
+.copybtn:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.notif {
+  transition: all .5s ease;
+  position: fixed;
+  bottom: 30px;
+  translate: 0px 140px;
+  background-color: var(--bg-light);
+  border-radius: 999px;
+  padding: 2rem 7rem;
+  color: rgb(166, 255, 93);
+  font-weight: bold;
+  text-shadow: 0 0 20px rgb(141, 226, 61);
+  border-style: solid;
+  border-color: var(--border);
+  box-shadow: 0 0 2rem -1rem black;
+}
+
+.socials {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials a {
+  width: 10vh;
+  height: 10vh;
+}
+
+.icon {
+  width: 100%;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  width: 100%;
+}
+
+.projects {
+  background-color: var(--bg-mid);
+  width: 85%;
+  border-radius: 3rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project {
+  background-color: var(--bg-light);
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: var(--border);
+}
+
+.project a {
+  color: var(--text-dark);
+  width: 95%;
+  height: 10vh;
+  background-color: var(--bg-mid);
+  border-radius: 3rem;
+  display: flex;
+}
+
+.project a:hover {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border);
+  color: var(--text);
+  background-color: var(--bg-light);
+  font-weight: bold;
+}
+
+.project a:active {
+  color: var(--text-i);
+  background-color: var(--bg-light-i);
+}
+.p_text {
+  font-size: 5rem;
+  margin: 5rem;
+}

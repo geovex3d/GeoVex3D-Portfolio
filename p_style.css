@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: hsl(0, 0%, 0%);
+  --bg-mid: hsl(0, 0%, 20%);
+  --bg-light: hsl(0, 0%, 30%);
+  --text: hsl(0, 0%, 100%);
+  --text-dark: hsl(0, 0%, 80%);
+  --bg-i: hsl(0, 0%, 80%);
+  --bg-mid-i: hsl(0, 0%, 90%);
+  --bg-light-i: hsl(0, 0%, 100%);
+  --text-i: hsl(0, 0%, 0%);
+  --text-dark-i: hsl(0, 0%, 20%);
+  --border: hsl(0, 0%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  align-items: center;
+  justify-content: center;
+  transition: all .1s ease;
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  background-color: var(--bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;
+  left: 3%;
+  top: 5%;
+  background-color: hsl(from var(--border) h s l / .5);
+  backdrop-filter: blur(5px);
+  width: auto;
+  height: 10vh;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.leave {
+  font-size: 4rem;
+  color: var(--text);
+  font-weight: bold;
+  margin: 0rem 2rem;
+  transition: transform .1s ease, text-shadow .1s ease;
+}
+.leave:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 20px white;
+}
+
+.nav {
+  width: 50%;
+  height: 100%;
+  margin-right: 3rem;
+  display: flex;
+  gap: 2%;
+}
+
+.btn {
+  font-size: 2rem;
+  display: flex;
+  background-color: var(--bg-mid);
+  width: 100%;
+  height: 75%;
+  border-style: none;
+  border-width: 1px;
+  border-color: var(--border);
+  border-radius: 5rem;
+  color: var(--text-dark);
+}
+.btn:hover {
+  background-color: var(--bg-light);
+  color: var(--text);
+  font-weight: bold;
+}
+.btn:active {
+  background-color: var(--bg-light-i);
+  color: var(--text-i);
+}
+
+section {
+  display: flex;
+  font-size: 2rem;
+  width: 100%;
+  height: 100vh;
+  color: var(--text);
+}
+
+.home {
+  flex-direction: column;
+}
+
+@keyframes fadeIn1 {
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn2 {
+  to {transform: translate(0px, 0%);}
+}
+
+.text1 {
+  font-size: 5rem;
+  opacity: 0;
+  transform: translate(0px, 250%);
+  animation: fadeIn1 1s ease forwards .1s, fadeIn2 1s ease forwards 1s;
+}
+
+.text2 {
+  margin-top: 3%;
+  width: 60%;
+  opacity: 0;
+  animation: fadeIn1 1s ease forwards 1.2s;
+}
+
+.text2u {
+  text-decoration: underline;
+}
+
+.contact {
+  padding: 3rem 0px;
+  width: 95%;
+  height: 100%;
+  margin: 2rem 0px;
+  background-color: var(--bg-mid);
+  border-radius: 3rem;
+  flex-direction: column;
+  gap: 10vh;
+}
+
+.copybtn {
+  color: rgb(102, 163, 255);
+  cursor: pointer;
+  user-select: none;
+}
+.copybtn:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.notif {
+  transition: all .5s ease;
+  position: fixed;
+  bottom: 30px;
+  translate: 0px 140px;
+  background-color: var(--bg-light);
+  border-radius: 999px;
+  padding: 2rem 7rem;
+  color: rgb(166, 255, 93);
+  font-weight: bold;
+  text-shadow: 0 0 20px rgb(141, 226, 61);
+  border-style: solid;
+  border-color: var(--border);
+  box-shadow: 0 0 2rem -1rem black;
+}
+
+.socials {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials a {
+  width: 10vh;
+  height: 10vh;
+}
+
+.icon {
+  width: 100%;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  width: 100%;
+}
+
+.desc {
+  background-color: var(--bg-mid);
+  width: 85%;
+  border-radius: 3rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.news {
+  margin-top: 3rem;
+  padding: 3rem 0;
+  width: 90%;
+  background: linear-gradient(135deg, rgb(145, 184, 73));
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.news:hover {
+  box-shadow: 0 0 2rem rgb(196, 255, 32);
+}
+
+.features {
+  font-size: 2rem;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  width: 90%;
+  background-color: var(--bg-light);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.textbig{
+  font-size: 4rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.buy {
+  min-width: auto;
+  width: 20%;
+  color: var(--text);
+  font-weight: bold;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  z-index: 1;
+  background: linear-gradient(135deg, rgb(129, 233, 60), rgb(57, 119, 16));
+  overflow: hidden;
+}
+
+.buy:hover {
+  box-shadow: 0 0 5rem rgb(180, 255, 60);
+}
+.buy:active {
+  color: var(--text-i);
+}
+
+.buy::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(168, 255, 110), rgb(93, 172, 41));
+  top: 0;
+  left: 0;
+  z-index: -2;
+  opacity: 0;
+  transition: all .1s ease;
+}
+.buy:hover::after {
+  opacity: 1;
+}
+.buy::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(235, 255, 222), rgb(198, 255, 160));
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all .1s ease;
+}
+
+.buy:active::before {
+  opacity: 1;
+}
+
+.update {
+  display: flex;
+  border-radius: 5rem;
+  background-color: var(--bg-mid-i);
+  color: var(--text );
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+.update::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  translate: -50% -50%;
+  background-color: rgb(102, 9, 9);
+  opacity: 1;
+  z-index: -1;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.update::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  padding: .5rem;
+  border-radius: 5.5rem;
+  translate: -50% -50%;
+  background: conic-gradient(from var(--angle), transparent, rgb(255, 78, 65));
+  z-index: -2;
+  animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.temp {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: .5rem;
+  padding: 2rem 5rem;
+}
+
+.temp::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  translate: -50% -50%;
+  padding: .5rem;
+  border-radius: 5.5rem;
+  background: conic-gradient(from var(--angle), transparent, rgb(255, 78, 65));
+  animation: 3s spin linear infinite;
+  filter: blur(5rem);
+  z-index: -2;
+}
